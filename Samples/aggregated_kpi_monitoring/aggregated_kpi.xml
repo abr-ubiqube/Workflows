@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectDefinition>  <information>
+    <allowLaunchOnFailedProcess>true</allowLaunchOnFailedProcess>
+    <description/>
+    <displayField>service_id</displayField>
+    <executionDetailsVisibility>5</executionDetailsVisibility>
+    <executionMode>TRANSACTION</executionMode>
+    <group>Assurance</group>
+    <icon>/images/eclipseIcons/page_obj.gif</icon>
+    <name>Aggregated KPI</name>
+    <order>1</order>
+    <poolId>0</poolId>
+    <readVariableVisibility>5</readVariableVisibility>
+    <showDetailedServiceInstances>false</showDetailedServiceInstances>
+    <showProcessExecConsole>false</showProcessExecConsole>
+    <showVariables>false</showVariables>
+    <visibility>5</visibility>
+  </information>  <variables frozen="0">
+    <variable displayName="device" displayOrder="0" keepOnImport="true" maxLength="165" name="params.devices.0.id" numberOfRowMax="0" startIncrement="0" tableSizeFix="false" type="Device">
+      <sections>
+        <section>configure</section>
+      </sections>
+    </variable>
+    <variable displayName="community" displayOrder="1" isUserLocked="true" maxLength="100" name="params.devices.0.community" numberOfRowMax="0" startIncrement="0" tableSizeFix="false" type="String">
+      <sections>
+        <section>configure</section>
+      </sections>
+    </variable>
+    <variable default="sysup" displayName="KPI name" displayOrder="2" maxLength="100" name="params.devices.0.kpi_name" numberOfRowMax="0" startIncrement="0" tableSizeFix="false" type="String">
+      <values>
+        <value>cpu</value>
+        <value>sysup</value>
+      </values>
+      <sections>
+        <section>configure</section>
+      </sections>
+    </variable>
+    <variable displayName="KPI OID" displayOrder="3" maxLength="100" name="params.devices.0.kpi_oid" numberOfRowMax="0" startIncrement="0" tableSizeFix="false" type="String">
+      <sections>
+        <section>configure</section>
+      </sections>
+    </variable>
+    <variable displayName="KPI Value" displayOrder="4" maxLength="100" name="params.devices.0.kpi_value" numberOfRowMax="0" startIncrement="0" tableSizeFix="false" type="Integer">
+      <sections>
+        <section>configure</section>
+      </sections>
+    </variable>
+  </variables>  <example>    <content/>  </example>
+  <process name="Process/OpenMSA/aggregated_kpi_monitoring/Process_create_assurance_service">
+    <visibility>5</visibility>
+    <displayName>create_assurance_service</displayName>
+    <icon/>
+    <poolId>0</poolId>
+    <compensation/>
+    <allowSchedule>false</allowSchedule>
+    <type>CREATE</type>
+    <task name="Task_select_devices.php">
+      <processPath>/opt/fmc_repository/Process/OpenMSA/aggregated_kpi_monitoring/Process_create_assurance_service/Tasks/</processPath>
+      <displayName>select devices</displayName>
+    </task>
+  </process>
+<process name="Process/OpenMSA/aggregated_kpi_monitoring/Process_run">
+    <visibility>5</visibility>
+    <displayName>run</displayName>
+    <icon/>
+    <poolId>0</poolId>
+    <compensation/>
+    <allowSchedule>true</allowSchedule>
+    <type>UPDATE</type>
+    <task name="Task_get_kpi.php">
+      <processPath>/opt/fmc_repository/Process/OpenMSA/aggregated_kpi_monitoring/Process_run/Tasks/</processPath>
+      <displayName>get kpi</displayName>
+    </task>
+    <task name="Task_record_kpi.php">
+      <processPath>/opt/fmc_repository/Process/OpenMSA/aggregated_kpi_monitoring/Process_run/Tasks/</processPath>
+      <displayName>record kpi</displayName>
+    </task>
+  </process>
+  <process name="Process/OpenMSA/aggregated_kpi_monitoring/Process_delete_service">
+    <visibility>5</visibility>
+    <displayName>delete service</displayName>
+    <icon/>
+    <poolId>0</poolId>
+    <compensation/>
+    <allowSchedule>false</allowSchedule>
+    <type>DELETE</type>
+    <task name="Task_delete.php">
+      <processPath>/opt/fmc_repository/Process/OpenMSA/aggregated_kpi_monitoring/Process_delete_service/Tasks/</processPath>
+      <displayName>delete</displayName>
+    </task>
+  </process>
+<process name="Process/OpenMSA/aggregated_kpi_monitoring/Process_update_info">
+    <visibility>5</visibility>
+    <displayName>update_info</displayName>
+    <icon/>
+    <poolId>0</poolId>
+    <compensation/>
+    <allowSchedule>false</allowSchedule>
+    <type>UPDATE</type>
+    <task name="/opt/fmc_repository/Process/OpenMSA/aggregated_kpi_monitoring/Process_create_assurance_service/Tasks/Task_select_devices.php">
+      <processPath/>
+      <displayName>select devices</displayName>
+    </task>
+  </process>
+</ObjectDefinition>
