@@ -8,7 +8,7 @@
     <executionMode>TRANSACTION</executionMode>
     <group>Public Cloud|AWS</group>
     <icon>/images/eclipseIcons/page_obj.gif</icon>
-    <name>Manage Instances on AWS</name>
+    <name>VNF Orchestration</name>
     <order>10000</order>
     <poolId>0</poolId>
     <readVariableVisibility>5</readVariableVisibility>
@@ -142,11 +142,6 @@
     <variable displayName="Device Id" displayOrder="19" isUserLocked="true" maxLength="100" name="params.device_id" startIncrement="0" type="Device" visible="false">
       <sections>
         <section>Do MSA device initial provisioning</section>
-      </sections>
-    </variable>
-    <variable displayName="Abc" displayOrder="21" maxLength="100" name="params.abc" startIncrement="0" type="ServiceRef" visible="false">
-      <sections>
-        <section>Terminate VNFCi from AWS</section>
       </sections>
     </variable>
     <variable default="false" displayName="Force" displayOrder="22" maxLength="100" name="params.force" startIncrement="0" type="Boolean">
@@ -334,7 +329,7 @@
 	</process>
 	<process name="Process/OpenMSA/Public_Cloud/AWS/Instance_Management/Process_Sync_with_AWS">
 		<visibility>5</visibility>
-		<displayName>Sync with AWS</displayName>
+		<displayName>Sync with Cloud</displayName>
 		<icon/>
 		<poolId>0</poolId>
 		<compensation/>
