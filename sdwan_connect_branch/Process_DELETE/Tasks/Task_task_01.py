@@ -3,6 +3,10 @@ from msa_sdk.msa_api import MSA_API
 from msa_sdk.order import Order
 
 dev_var = Variables()
+
+dev_var.add('my_variable', var_type='string')
+
+
 context = Variables.task_call()
 
 # left device cleanup
