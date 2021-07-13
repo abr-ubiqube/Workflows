@@ -8,9 +8,39 @@
     <variable displayName="Secret" name="params.secret" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" displayOrder="5" increment="0" refServiceURI="" keepOnImport="false" editable="false" onlyDetailView="false" localVarNameMatch="" remoteVarNameMatch="" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" displayNameHeader="" fullDisplayName="" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false"/>
   </variables>
   <example/>
+  <process name="Process/workflows/sdwan_connect_branch/Process_CREATE">
+    <displayName>CREATE</displayName>
+    <type>CREATE</type>
+    <visibility>5</visibility>
+    <allowSchedule/>
+    <task name="Task_task_01_retrieve_data.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_CREATE/Tasks</processPath>
+      <displayName>task_01_retrieve_data</displayName>
+    </task>
+    <task name="Task_task_02_create_configuration.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_CREATE/Tasks</processPath>
+      <displayName>task_02_create_configuration</displayName>
+    </task>
+    <task name="Task_task_03_create_loopbacks.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_CREATE/Tasks</processPath>
+      <displayName>task_03_create_loopbacks</displayName>
+    </task>
+    <task name="Task_task_04_create_secrets.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_CREATE/Tasks</processPath>
+      <displayName>task_04_create_secrets</displayName>
+    </task>
+    <task name="Task_task_05_create_policy.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_CREATE/Tasks</processPath>
+      <displayName>task_05_create_policy</displayName>
+    </task>
+    <task name="Task_task_06_create_cryptomap.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_CREATE/Tasks</processPath>
+      <displayName>task_06_create_cryptomap</displayName>
+    </task>
+  </process>
   <information>
     <icon/>
-    <description></description>
+    <description/>
     <displayField>service_id</displayField>
     <serviceTaskType>python</serviceTaskType>
     <order>10000</order>
