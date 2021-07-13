@@ -10,6 +10,7 @@ dev_var.add('site_right', var_type='Device')
 dev_var.add('leftsubnet', var_type='string')
 dev_var.add('rightsubnet', var_type='string')
 dev_var.add('secret', var_type='string')
+
 context = Variables.task_call(dev_var)
 
 left_device_id = context['site_left'][-3:]
