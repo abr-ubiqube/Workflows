@@ -38,6 +38,16 @@
       <displayName>task_06_create_cryptomap</displayName>
     </task>
   </process>
+  <process name="Process/workflows/sdwan_connect_branch/Process_DELETE">
+    <displayName>DELETE</displayName>
+    <type>DELETE</type>
+    <visibility>5</visibility>
+    <allowSchedule/>
+    <task name="Task_task_01.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_connect_branch/Process_DELETE/Tasks</processPath>
+      <displayName>task_01</displayName>
+    </task>
+  </process>
   <information>
     <icon/>
     <description/>
