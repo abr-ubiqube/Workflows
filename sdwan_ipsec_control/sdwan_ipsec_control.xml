@@ -4,6 +4,26 @@
     <variable displayName="IPsec Id" name="params.id" startIncrement="0" type="Integer" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" displayOrder="1" increment="0" refServiceURI="" keepOnImport="false" editable="false" onlyDetailView="false" localVarNameMatch="" remoteVarNameMatch="" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" displayNameHeader="" fullDisplayName="" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false"/>
   </variables>
   <example/>
+  <process name="Process/workflows/sdwan_ipsec_control/Process_CREATE">
+    <displayName>CREATE</displayName>
+    <type>CREATE</type>
+    <visibility>5</visibility>
+    <allowSchedule/>
+    <task name="Task_task1.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_ipsec_control/Process_CREATE/Tasks</processPath>
+      <displayName>task1</displayName>
+    </task>
+  </process>
+  <process name="Process/workflows/sdwan_ipsec_control/Process_DELETE">
+    <displayName>DELETE</displayName>
+    <type>DELETE</type>
+    <visibility>5</visibility>
+    <allowSchedule/>
+    <task name="Task_task1.py">
+      <processPath>/opt/fmc_repository/Process/workflows/sdwan_ipsec_control/Process_DELETE/Tasks</processPath>
+      <displayName>task1</displayName>
+    </task>
+  </process>
   <information>
     <icon/>
     <description/>
