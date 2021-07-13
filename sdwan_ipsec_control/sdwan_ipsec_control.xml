@@ -28,7 +28,7 @@
   <information>
     <icon/>
     <description/>
-    <displayField>instance_id_for_display</displayField>
+    <displayField>service_id</displayField>
     <serviceTaskType>python</serviceTaskType>
     <order>10000</order>
     <visibility>5</visibility>
