@@ -9,6 +9,8 @@ dev_var.add('site_left', var_type='Device')
 #dev_var.add('site_right', var_type='Device')
 
 dev_var.add('site_right.0.id')
+dev_var.add('site_right.0.subnet')
+
 dev_var.add('leftsubnet', var_type='string')
 dev_var.add('rightsubnet', var_type='string')
 dev_var.add('secret', var_type='string')
