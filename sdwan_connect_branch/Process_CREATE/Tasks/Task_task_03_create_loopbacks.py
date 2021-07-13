@@ -6,6 +6,7 @@ from msa_sdk.order import Order
 dev_var = Variables()
 context = Variables.task_call()
 
+
 # (1) loopback
 try:
 	'''check if loopback already exists'''
