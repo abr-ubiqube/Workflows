@@ -19,7 +19,9 @@ except Exception as e:
   ret = MSA_API.process_content('FAILED',
                               	f'ERROR: {str(e)}',
                               	context, True)
-  
+
+context['instance_id_for_display'] = context['device_id'];
+
 ret = MSA_API.process_content('ENDED',
                           	f'Take IPsec control.',
                           	context, True)
